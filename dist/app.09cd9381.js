@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{0:function(e,n,t){e.exports=t("tjUo")},tjUo:function(e,n,t){"use strict";t.r(n);var o=t("q1tI"),r=t.n(o),a=t("i8i4");function c(){return r.a.createElement("div",null,"hello react111")}t.n(a).a.render(r.a.createElement(c,null),document.getElementById("app"))}},[[0,1,2]]]);
+//# sourceMappingURL=app.09cd9381.js.map
