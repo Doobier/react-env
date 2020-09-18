@@ -72,7 +72,16 @@ module.exports={
     resolve: {
         extensions: ['.js', '.jsx', 'sass', 'css', '.ts', '.tsx'],
         alias: {
-
+            screens: path.join(__dirname, 'src/screens'),
+            components: path.join(__dirname, 'src/components'),
+            containers: path.join(__dirname, 'src/containers'),
+            router: path.join(__dirname, 'src/router'),
+            services: path.join(__dirname, 'src/services'),
+            actions: path.join(__dirname, 'src/redux/actions'),
+            reducers: path.join(__dirname, 'src/redux/reducers'),
+            sagas: path.join(__dirname, 'src/redux/sagas'),
+            utils: path.join(__dirname, 'src/utils'),
+            assets: path.join(__dirname, 'src/assets')
         }
     },
     devServer: {

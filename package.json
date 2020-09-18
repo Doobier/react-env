@@ -1,11 +1,11 @@
 {
-  "name": "react-env",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "react-env-build",
+  "description": "{{description}}",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.dev.config.js --color --progress --hot --host 0.0.0.0",
+    "start": "webpack-dev-server --open --config webpack.dev.config.js --color --progress --hot --host 0.0.0.0",
     "build": "webpack --config webpack.config.js --color --progress",
     "deplpy": "node deploy.js"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Doobier/react-env.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "{{author}}",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Doobier/react-env/issues"
@@ -28,7 +28,11 @@
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-loadable": "^5.5.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
