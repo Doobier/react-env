@@ -16,7 +16,7 @@ const RouterConfig = () => (
   <Provider store={store}>
       <ConnectedRouter history={history}>
           <Switch>
-              <Route path="/" component={BasicLayout} authority={['user']} />
+              <AuthorizedRoute path="/" component={BasicLayout} authority={['user']} />
           </Switch>
       </ConnectedRouter>
   </Provider>

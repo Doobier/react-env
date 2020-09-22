@@ -5,7 +5,7 @@ import Authorized from "components/Authorized/Authorized";
 
 class AuthorizedRoute extends Component {
   render() {
-    console.info(this.props);
+    // console.info(this.props);
     const {component: Component, render, authority, ...rest} = this.props;
     // const {location} = this.props.router;
     const auth = {
