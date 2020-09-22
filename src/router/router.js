@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import {Provider} from 'react-redux';
-// import {ConnectedRouter} from 'react-router-redux';
+import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux';
 import Loadable from 'react-loadable';
 import AuthorizedRoute from 'components/Authorized/AuthorizedRoute';
 import HotLoading from 'components/HotLoading';
@@ -11,5 +11,15 @@ const BasicLayout = Loadable({
     loader: () => import('containers/BasicLayout'),
     loading: HotLoading,
 });
+console.log(history);
+const RouterConfig = () => (
+  <Provider store={store}>
+      <ConnectedRouter history={history}>
+          <Switch>
+              <Route path="/" component={BasicLayout} authority={['user']} />
+          </Switch>
+      </ConnectedRouter>
+  </Provider>
+)
 
-// const RouterConfig =
+export default RouterConfig;

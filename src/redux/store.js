@@ -1,7 +1,7 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {hot} from 'react-hot-loader';
-import createHistory from 'history/createBrowserHistory';
+import {createBrowserHistory} from 'history';
 import {routerMiddleware, routerReducer} from 'react-router-redux';
 import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -15,7 +15,7 @@ const appCombineReducers = combineReducers({
 
 hot(module)(appCombineReducers);
 const sagaMiddleware = createSagaMiddleware();
-export const history = createHistory({basename: 'xxx'});
+export const history = createBrowserHistory({basename: '/'});
 const historyMiddleware = routerMiddleware(history);
 const store = createStore(
   appCombineReducers,

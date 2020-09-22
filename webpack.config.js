@@ -27,8 +27,22 @@ module.exports={
                 exclude: /node_modules/,
                 use:[
                     'style-loader',
-                    'css-loader?modules&localIdentName=[name]_[local]_[hash:base64:5]',
+                    { loader: 'css-loader',options: {modules: { localIdentName: '[name]_[local]_[hash:base64:5]'},}},
+                    // 'css-loader?modules&localIdentName=[name]_[local]_[hash:base64:5]',
                     'postcss-loader'
+                ]
+            },
+            {// antd样式处理
+                test:/\.css$/,
+                exclude:/src/,
+                use:[
+                    { loader: "style-loader",},
+                    {
+                        loader: "css-loader",
+                        options:{
+                            importLoaders:1
+                        }
+                    }
                 ]
             },
             {
@@ -89,5 +103,5 @@ module.exports={
             utils: path.join(__dirname, 'src/utils'),
             assets: path.join(__dirname, 'src/assets')
         }
-    }
+    },
 }
